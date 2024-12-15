@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Vintage Clock",
+    "description": "A classic vintage wall clock from the 1930s.",
+    "start_price": 50,
+    "reserve_price": 150
+  },
+  {
+    "title": "Antique Vase",
+    "description": "A rare porcelain vase from the Qing dynasty.",
+    "start_price": 200,
+    "reserve_price": 500
+  }
+]
