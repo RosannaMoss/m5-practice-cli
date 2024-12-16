@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Story Sans';
+  src: url('./story-sans-font-trade-me/StorySansWeb-Bold.woff2') format('woff2'),
+       url('./story-sans-font-trade-me/StorySansWeb-Bold.woff') format('woff'),
+       url('./story-sans-font-trade-me/StorySansWeb-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
