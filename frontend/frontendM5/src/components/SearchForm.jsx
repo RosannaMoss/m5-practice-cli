@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./SearchForm.css";
+import styles from "./SearchForm.module.css";
 
 const SearchForm = () => {
   const [keyword, setKeyword] = useState("");
@@ -26,41 +26,41 @@ const SearchForm = () => {
   };
 
   return (
-    <div className="search-container">
-      <h1>KIA ORA! READY TO FIND YOUR NEW?</h1>
-      <div className="search-box">
+    <div className={styles.searchContainer}>
+      <h1 className={styles.heading}>KIA ORA! READY TO FIND YOUR NEW?</h1>
+      <div className={styles.searchBox}>
         <input
           type="text"
-          className="search-input"
+          className={styles.searchInput}
           placeholder="Search all of Trade Me"
           value={keyword}
           onChange={(e) => setKeyword(e.target.value)}
           onKeyPress={handleKeyPress}
         />
-        <button className="search-button" onClick={handleSearch}>
+        <button className={styles.searchButton} onClick={handleSearch}>
           Search
         </button>
       </div>
 
-      <nav className="category-nav">
-        <a href="#" className="category-link marketplace">Marketplace</a>
-        <a href="#" className="category-link jobs">Jobs</a>
-        <a href="#" className="category-link motors">Motors</a>
-        <a href="#" className="category-link property">Property</a>
-        <a href="#" className="category-link services">Services</a>
+      <nav className={styles.categoryNav}>
+        <a href="#" className={`${styles.categoryLink} ${styles.marketplace}`}>Marketplace</a>
+        <a href="#" className={`${styles.categoryLink} ${styles.jobs}`}>Jobs</a>
+        <a href="#" className={`${styles.categoryLink} ${styles.motors}`}>Motors</a>
+        <a href="#" className={`${styles.categoryLink} ${styles.property}`}>Property</a>
+        <a href="#" className={`${styles.categoryLink} ${styles.services}`}>Services</a>
       </nav>
 
       {results.length > 0 && (
-        <div className="results-container">
-          <h2 className="results-title">Results:</h2>
-          <ul className="results-list">
+        <div className={styles.resultsContainer}>
+          <h2 className={styles.resultsTitle}>Results:</h2>
+          <ul className={styles.resultsList}>
             {results.map((item) => (
-              <li key={item._id} className="result-item">
-                <div className="result-title">
+              <li key={item._id} className={styles.resultItem}>
+                <div className={styles.resultTitle}>
                   <strong>{item.title}</strong>
                 </div>
-                <div>{item.description}</div>
-                <div className="result-price">
+                <div className={styles.resultDescription}>{item.description}</div>
+                <div className={styles.resultPrice}>
                   Start Price: ${item.start_price} | Reserve Price: ${item.reserve_price}
                 </div>
               </li>
@@ -69,7 +69,7 @@ const SearchForm = () => {
         </div>
       )}
       {hasSearched && results.length === 0 && (
-        <div className="no-results">No items found</div>
+        <div className={styles.noResults}>No items found</div>
       )}
     </div>
   );

@@ -10,5 +10,10 @@
     "description": "A rare porcelain vase from the Qing dynasty.",
     "start_price": 200,
     "reserve_price": 500
+  },
+  {"title": "Victorian Vanity",
+    "description": "A beautiful Victorian vanity from the 19th century with a small amount of damage.",
+    "start_price": 600,
+    "reserve_price": 1000
   }
 ]
